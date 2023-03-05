@@ -6,7 +6,7 @@
       <a href="">проекты</a>
     </nav>
 
-    <img src="~/assets/mksb-logo.png" />
+    <img src="~/assets/img/mksb-logo.svg" />
     
     <nav class="header-navigation">
       <a href="">о нас</a>

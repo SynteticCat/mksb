@@ -1,17 +1,17 @@
 <template>
   <div class="header-container">
     <nav class="header-navigation">
-      <a href="">услуги</a>
-      <a href="">продукты</a>
-      <a href="">проекты</a>
+      <NuxtLink to="/services">услуги</NuxtLink>
+      <NuxtLink to="/products">продукты</NuxtLink>
+      <NuxtLink to="/projects">проекты</NuxtLink>
     </nav>
 
-    <img src="~/assets/img/mksb-logo.svg" />
+    <NuxtLink to="/"><img src="~/assets/img/mksb-logo.svg" /></NuxtLink>
     
     <nav class="header-navigation">
-      <a href="">о нас</a>
-      <a href="">контакты</a>
-      <a href="">заполнить бриф</a>
+      <NuxtLink to="/about">о нас</NuxtLink>
+      <NuxtLink to="/contacts">контакты</NuxtLink>
+      <NuxtLink to="/fill-brief">заполнить бриф</NuxtLink>
     </nav>
   </div>
 </template>

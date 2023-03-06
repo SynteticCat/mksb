@@ -1,6 +1,10 @@
 <template>
-	<div class="about-wrapper">
-		Страница "О нас"
+	<div class="services-wrapper">
+		<nav class="services-list">
+			<NuxtLink to="">о компании</NuxtLink>
+			<NuxtLink to="">новости</NuxtLink>
+			<NuxtLink to="">мероприятия</NuxtLink>
+		</nav>
 	</div>
 </template>
 
@@ -11,7 +15,39 @@ export default {
 </script>
 
 <style scoped>
-.about-wrapper {
-	padding-top: 146px;
+.services-wrapper {
+	flex-grow: 1;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.services-list {
+	display: flex;
+	flex-direction: column;
+	font-size: 15vh;
+	text-transform: uppercase;
+	font-weight: bold;
+	color: transparent; /* прозрачный цвет букв */
+  -webkit-text-stroke: 1px black;
+}
+
+.services-list > a:nth-child(2) {
+	margin-left: 2.25em;
+}
+
+.services-list > a:nth-child(3) {
+	margin-left: .75em;
+}
+
+.services-list > a {
+	width: max-content;
+	cursor: pointer;
+}
+
+.services-list > a:hover {
+	color: black;
+	-webkit-text-stroke: none;
+	transition: .2s linear;
 }
 </style>

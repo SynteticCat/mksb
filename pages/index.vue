@@ -22,6 +22,7 @@ export default {
     display: flex;
     flex-direction: column;    
     justify-content: space-between;
+    padding-bottom: 80px;
 }
 
 .main-page-background {

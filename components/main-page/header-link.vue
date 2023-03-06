@@ -37,12 +37,16 @@ export default {
   opacity: 0.6;
 }
 
+.active {
+	padding-top: .5em;
+}
+
 .active::before {
 	position: absolute;
 	content: "";
 	background-color: black;
 	width: 2px;
-	height: 32px;
+	height: 3em;
 	transform: translate(-50%, calc(-100% - 8px));
 	left: 50%;
 }

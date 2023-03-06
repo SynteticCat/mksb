@@ -32,6 +32,5 @@ body {
   flex-grow: 1;
   width: 80%;
   margin: 0 auto;
-  padding-bottom: 80px;
 }
 </style>

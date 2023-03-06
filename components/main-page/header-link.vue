@@ -26,6 +26,7 @@ export default {
 
 <style scoped>
 .header-link {
+	position: relative;
   text-decoration: none;
   text-transform: uppercase;
 	color: black;
@@ -36,7 +37,13 @@ export default {
   opacity: 0.6;
 }
 
-.active {
-	background-color: rgb(255, 0, 0);
+.active::before {
+	position: absolute;
+	content: "";
+	background-color: black;
+	width: 2px;
+	height: 32px;
+	transform: translate(-50%, calc(-100% - 8px));
+	left: 50%;
 }
 </style>

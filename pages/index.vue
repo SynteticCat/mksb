@@ -32,7 +32,16 @@ export default {
     right: 0;
     bottom: 0;
     z-index: -1;
-    background: center/cover no-repeat url(~/assets/img/gazprom-bg.svg);
+    background: center/cover no-repeat url(~/assets/img/tinkoff-logo-animation.gif);
     box-sizing: border-box;
+}
+
+.main-page-background::after {
+  background-color: rgba(0, 0, 0, 0.37);
+  content: '';
+  display: block;
+  height: 100%;
+  position: absolute;
+  width: 100%;
 }
 </style>

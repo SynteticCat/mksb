@@ -12,6 +12,6 @@ export default {
 
 <style scoped>
 .fill-brief-wrapper {
-	padding-top: 146px;
+	padding-top: 14vh;
 }
 </style>

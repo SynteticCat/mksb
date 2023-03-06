@@ -1,24 +1,36 @@
 <template>
   <div class="navigation-container">
     <nav class="navigation-list">
-      <div>Платформы</div>
-      <div>Брендинг</div>
-      <div>Приложения</div>
-      <div>Промо</div>
-      <div>Социальные</div>
+      <div><div :class="['pointer', { active: page === 'platforms' }]"/>Платформы</div>
+      <div><div :class="['pointer', { active: page === 'brending' }]"/>Брендинг</div>
+      <div><div :class="['pointer', { active: page === 'apps' }]"/>Приложения</div>
+      <div><div :class="['pointer', { active: page === 'promo' }]"/>Промо</div>
+      <div><div :class="['pointer', { active: page === 'socials' }]"/>Социальные</div>
     </nav>
 
-    <div>
+    <div class="product">
       <div class="product-title">Газпром медиа</div>
       <div class="product-subtitle">платформы</div>
-      <div class="product-link">Посмотреть -></div>
+      <NuxtLink to="" class="product-link">
+        <div>Посмотреть</div>
+        <img src="~/assets/img/arrow-right.svg" alt="">
+      </NuxtLink>
+    </div>
+
+    <div class="product-counter">
+      1 / 26
     </div>
   </div>
 </template>
 
 <script>
 export default {
-  name: 'MainPageNavigation'
+  name: 'MainPageNavigation',
+  computed: {
+    page() {
+      return 'brending'
+    }
+  }
 }
 </script>
 
@@ -33,9 +45,25 @@ export default {
   display: flex;
   flex-direction: column;
   gap: 12px;
-  width: 750px;
+  flex-grow: 3;
   font-size: 20px;
   line-height: 24px;
+}
+
+.product {
+  flex-grow: 1;
+}
+
+.navigation-list > div {
+  display: flex;
+  align-items: center;
+}
+
+.pointer.active {
+  background-color: #fff;
+  height: 3px;
+  width: 24px;
+  margin-right: 12px;
 }
 
 .product-title {
@@ -51,7 +79,19 @@ export default {
 }
 
 .product-link {
+  display: flex;
   font-size: 20px;
   line-height: 24px;
+}
+
+.product-link > img {
+  margin-left: 8px;
+}
+
+.product-counter {
+  align-self: flex-end;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 20px;
 }
 </style>

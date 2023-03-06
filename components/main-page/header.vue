@@ -1,29 +1,54 @@
 <template>
   <div class="header-container">
     <nav class="header-navigation">
-      <NuxtLink to="/services">услуги</NuxtLink>
-      <NuxtLink to="/products">продукты</NuxtLink>
-      <NuxtLink to="/projects">проекты</NuxtLink>
+      <HeaderLink
+        v-for="{ name, route } in leftPages"
+        :key="route"
+        :name="name"
+        :route="route"
+      />
     </nav>
 
-    <NuxtLink to="/"><img src="~/assets/img/mksb-logo.svg" /></NuxtLink>
+    <NuxtLink to="/" class="header-logo" active-class="active"><img src="~/assets/img/mksb-logo.svg" /></NuxtLink>
     
     <nav class="header-navigation">
-      <NuxtLink to="/about">о нас</NuxtLink>
-      <NuxtLink to="/contacts">контакты</NuxtLink>
-      <NuxtLink to="/fill-brief">заполнить бриф</NuxtLink>
+      <HeaderLink
+        v-for="{ name, route } in rightPages"
+        :key="route"
+        :name="name"
+        :route="route"
+      />
     </nav>
   </div>
 </template>
 
 <script>
+import HeaderLink from './header-link.vue'
+
 export default {
-  name: 'MainPageHeader'
+  components: { HeaderLink },
+  data() {
+    return {
+      leftPages: [
+        { name: 'услуги', route: "/services" },
+        { name: 'продукты', route: "/products" },
+        { name: 'проекты', route: "/projects" },
+      ],
+      rightPages: [
+        { name: 'о нас', route: "/about" },
+        { name: 'контакты', route: "/contacts" },
+        { name: 'заполнить бриф', route: "/fill-brief" },
+      ]
+    }
+  }
 }
 </script>
 
 <style scoped>
 .header-container {
+  width: 80%;
+  margin: 0 auto;
+  padding-top: 40px;
   line-height: 20px;
   display: flex;
   align-content: center;
@@ -33,12 +58,9 @@ export default {
 .header-navigation {
   display: flex;
   gap: 32px;
-  opacity: 0.6;
 }
 
-.header-navigation > a {
-  text-decoration: none;
-  color: #fff;
-  text-transform: uppercase;
+.header-logo:not(.active) {
+  filter: invert(1);
 }
 </style>

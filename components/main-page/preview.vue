@@ -14,7 +14,10 @@ export default {
 <style scoped>
 .preview-container {
   color: #fff;
-  padding: 156px 0 100px 0;
+  flex-grow: 1;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
 }
 
 .preview-title {

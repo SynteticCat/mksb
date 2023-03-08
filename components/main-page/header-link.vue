@@ -30,6 +30,8 @@ export default {
   text-decoration: none;
   text-transform: uppercase;
 	color: black;
+	transition-property: transform;
+	transition-duration: .2s;
 }
 
 .header-link.main-page {
@@ -37,17 +39,30 @@ export default {
   opacity: 0.6;
 }
 
-.active {
-	padding-top: .5em;
+.header-link:hover,
+.header-link.active {
+	transform: translateY(.5em);
 }
 
-.active::before {
+.header-link::before {
 	position: absolute;
 	content: "";
-	background-color: black;
 	width: 2px;
 	height: 3em;
-	transform: translate(-50%, calc(-100% - 8px));
+	background-color: black;
+	transform: translateY(-200%);
 	left: 50%;
+	transition-property: transform;
+	transition-duration: .2s;
 }
+
+.header-link.main-page::before {
+	background-color: #fff;
+}
+
+.header-link:hover::before,
+.header-link.active::before {
+	transform: translateY(calc(-100% - .5em));
+}
+
 </style>

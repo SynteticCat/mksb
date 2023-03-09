@@ -1,27 +1,11 @@
 <template>
   <div class="container">
     <Header />
-    <NuxtPage class="wrapper" />
+    <nuxt class="wrapper" />
   </div>
 </template>
 
-<script>
-import Header from '~/components/main-page/header.vue'
-
-export default {
-	components: { Header }
-}
-</script>
-
 <style>
-:root {
-  /* ... */
-}
-
-body {
-	font-family: 'Montserrat', sans-serif;
-}
-
 .container {
   display: flex;
   flex-direction: column;

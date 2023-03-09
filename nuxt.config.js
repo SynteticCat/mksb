@@ -1,15 +1,47 @@
-// https://nuxt.com/docs/api/configuration/nuxt-config
 export default {
-  css: [
-    '~/assets/css/normalize.css'
-  ],
+  // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
-    link: [
-      {
-        rel: 'stylesheet',
-        // href: 'httpshttps://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap&display=swap'
-        href: 'https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap'
-      }
+    title: 'mksb',
+    htmlAttrs: {
+      lang: 'en'
+    },
+    meta: [
+      { charset: 'utf-8' },
+      { name: 'viewport', content: 'width=device-width, initial-scale=1' },
+      { hid: 'description', name: 'description', content: '' },
+      { name: 'format-detection', content: 'telephone=no' }
     ],
+    link: [
+      // ...fonts
+    ]
+  },
+
+  // Global CSS: https://go.nuxtjs.dev/config-css
+  css: [
+    '~/assets/css/global.css',
+    '~/assets/css/normalize.css',
+  ],
+
+  // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
+  plugins: [
+  ],
+
+  // Auto import components: https://go.nuxtjs.dev/config-components
+  components: {
+    dirs: [
+      '~/components',
+      '~/components/common'
+    ]
+  },
+
+  // Modules: https://go.nuxtjs.dev/config-modules
+  modules: ['@nuxtjs/axios'],
+
+  // Modules for dev and build (recommended): https://go.nuxtjs.dev/config-modules
+  buildModules: [
+  ],
+
+  // Build Configuration: https://go.nuxtjs.dev/config-build
+  build: {
   }
 }

@@ -1,17 +1,5 @@
 <template>
-	<div class="projects-wrapper">
-		Страница "Проекты"
-	</div>
+  <div>
+    проекты
+  </div>
 </template>
-
-<script>
-export default {
-	// ...
-}
-</script>
-
-<style scoped>
-.projects-wrapper {
-	padding-top: 14vh;
-}
-</style>
